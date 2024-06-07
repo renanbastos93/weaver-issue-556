@@ -15,14 +15,14 @@ import (
 
 func init() {
 	codegen.Register(codegen.Registration{
-		Name:  "github.com/renanbastos93/weaverdemo/ImageScaler",
+		Name:  "github.com/renanbastos93/weaver-issue-556/ImageScaler",
 		Iface: reflect.TypeOf((*ImageScaler)(nil)).Elem(),
 		Impl:  reflect.TypeOf(scaler{}),
 		LocalStubFn: func(impl any, caller string, tracer trace.Tracer) any {
-			return imageScaler_local_stub{impl: impl.(ImageScaler), tracer: tracer, scaleMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaverdemo/ImageScaler", Method: "Scale", Remote: false, Generated: true})}
+			return imageScaler_local_stub{impl: impl.(ImageScaler), tracer: tracer, scaleMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaver-issue-556/ImageScaler", Method: "Scale", Remote: false, Generated: true})}
 		},
 		ClientStubFn: func(stub codegen.Stub, caller string) any {
-			return imageScaler_client_stub{stub: stub, scaleMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaverdemo/ImageScaler", Method: "Scale", Remote: true, Generated: true})}
+			return imageScaler_client_stub{stub: stub, scaleMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaver-issue-556/ImageScaler", Method: "Scale", Remote: true, Generated: true})}
 		},
 		ServerStubFn: func(impl any, addLoad func(uint64, float64)) codegen.Server {
 			return imageScaler_server_stub{impl: impl.(ImageScaler), addLoad: addLoad}
@@ -30,17 +30,17 @@ func init() {
 		ReflectStubFn: func(caller func(string, context.Context, []any, []any) error) any {
 			return imageScaler_reflect_stub{caller: caller}
 		},
-		RefData: "⟦553dfbbd:wEaVeReDgE:github.com/renanbastos93/weaverdemo/ImageScaler→github.com/renanbastos93/weaverdemo/LocalCache⟧\n",
+		RefData: "⟦965985aa:wEaVeReDgE:github.com/renanbastos93/weaver-issue-556/ImageScaler→github.com/renanbastos93/weaver-issue-556/LocalCache⟧\n",
 	})
 	codegen.Register(codegen.Registration{
-		Name:  "github.com/renanbastos93/weaverdemo/LocalCache",
+		Name:  "github.com/renanbastos93/weaver-issue-556/LocalCache",
 		Iface: reflect.TypeOf((*LocalCache)(nil)).Elem(),
 		Impl:  reflect.TypeOf(implLocalCache{}),
 		LocalStubFn: func(impl any, caller string, tracer trace.Tracer) any {
-			return localCache_local_stub{impl: impl.(LocalCache), tracer: tracer, getMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaverdemo/LocalCache", Method: "Get", Remote: false, Generated: true}), setMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaverdemo/LocalCache", Method: "Set", Remote: false, Generated: true})}
+			return localCache_local_stub{impl: impl.(LocalCache), tracer: tracer, getMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaver-issue-556/LocalCache", Method: "Get", Remote: false, Generated: true}), setMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaver-issue-556/LocalCache", Method: "Set", Remote: false, Generated: true})}
 		},
 		ClientStubFn: func(stub codegen.Stub, caller string) any {
-			return localCache_client_stub{stub: stub, getMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaverdemo/LocalCache", Method: "Get", Remote: true, Generated: true}), setMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaverdemo/LocalCache", Method: "Set", Remote: true, Generated: true})}
+			return localCache_client_stub{stub: stub, getMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaver-issue-556/LocalCache", Method: "Get", Remote: true, Generated: true}), setMetrics: codegen.MethodMetricsFor(codegen.MethodLabels{Caller: caller, Component: "github.com/renanbastos93/weaver-issue-556/LocalCache", Method: "Set", Remote: true, Generated: true})}
 		},
 		ServerStubFn: func(impl any, addLoad func(uint64, float64)) codegen.Server {
 			return localCache_server_stub{impl: impl.(LocalCache), addLoad: addLoad}
@@ -48,7 +48,7 @@ func init() {
 		ReflectStubFn: func(caller func(string, context.Context, []any, []any) error) any {
 			return localCache_reflect_stub{caller: caller}
 		},
-		RefData: "⟦4070fd4e:wEaVeReDgE:github.com/renanbastos93/weaverdemo/LocalCache→github.com/renanbastos93/weaverdemo/ImageScaler⟧\n",
+		RefData: "⟦0a9731a1:wEaVeReDgE:github.com/renanbastos93/weaver-issue-556/LocalCache→github.com/renanbastos93/weaver-issue-556/ImageScaler⟧\n",
 	})
 	codegen.Register(codegen.Registration{
 		Name:  "github.com/ServiceWeaver/weaver/Main",
@@ -64,7 +64,7 @@ func init() {
 		ReflectStubFn: func(caller func(string, context.Context, []any, []any) error) any {
 			return main_reflect_stub{caller: caller}
 		},
-		RefData: "⟦50668105:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/renanbastos93/weaverdemo/ImageScaler⟧\n",
+		RefData: "⟦4339c1b9:wEaVeReDgE:github.com/ServiceWeaver/weaver/Main→github.com/renanbastos93/weaver-issue-556/ImageScaler⟧\n",
 	})
 }
 

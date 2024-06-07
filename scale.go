@@ -12,7 +12,7 @@ type ImageScaler interface {
 
 type scaler struct {
 	weaver.Implements[ImageScaler]
-	weaver.Ref[LocalCache]
+	cache weaver.Ref[LocalCache]
 }
 
 func (e *scaler) Init(ctx context.Context) error {
@@ -20,5 +20,6 @@ func (e *scaler) Init(ctx context.Context) error {
 }
 
 func (e *scaler) Scale(ctx context.Context, image string) (string, error) {
+	_ = e.cache.Get()
 	return "", nil
 }

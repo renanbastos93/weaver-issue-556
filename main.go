@@ -7,19 +7,6 @@ import (
 	"github.com/ServiceWeaver/weaver"
 )
 
-// type localCache struct {
-// 	weaver.Implements[LocalCache]
-// 	mu    sync.Mutex
-// 	test  weaver.Ref[ImageScaler]
-// 	cache *lru.Cache[string, string]
-// 	// TODO: Eviction policy.
-// }
-
-// type scaler struct {
-// 	weaver.Implements[ImageScaler]
-// 	weaver.Ref[LocalCache]
-// }
-
 type implBFF struct {
 	weaver.Implements[weaver.Main]
 	scaler weaver.Ref[ImageScaler]
